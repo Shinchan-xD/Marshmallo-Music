@@ -1,0 +1,26 @@
+---
+application:
+  name: "marshmallo-music"
+  project: "lirbr-trial"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "liebe"
+    size: "100"
+    type: "ssd"
+    mount_point: "/mnt/liebe"
+databases:
+- type: "MYSQL"
+  name: "marshmallo bot"
+  version: "8.0"
+- type: "POSTGRESQL"
+  name: "marhsmallo"
+  version: "12"
+- type: "POSTGRESQL"
+  name: "marshmallo"
+  version: "12"
+routers:
+- name: "main-marshmallo-music"
+  routes:
+  - application_name: "marshmallo-music"
+    paths:
+    - "/*"
